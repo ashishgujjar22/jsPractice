@@ -7,8 +7,10 @@ const counter = {
     }, 1000);
   },
 };
-const coount =counter.increment.bind(counter); // expected: 1
-coount()
+// const coount =counter.increment.bind(counter); // expected: 1
+// coount()
+// const count = counter.increment.call(counter)
+const cout = counter.increment.apply(counter) 
 
 //Challenge 2
 // const calculator = {
