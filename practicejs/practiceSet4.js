@@ -203,7 +203,7 @@ const user = {
 // const p1 = { name: "Gujjar" };
 // const p2 = { name: "Ali" };
 
-// introduce.call(p1,"Rohtak,21")
+// introduce.call(p1,"Rohtak",21)
 // introduce.call(p2,"Delhi",22)
 
 // //challenge 18
