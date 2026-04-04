@@ -80,7 +80,28 @@
 // }
 // user()
 
-// 
+// challenge 5
+async function users (){
+  try {
+    const user1 = await fetch("https://jsonplaceholder.typicode.com/users/1")
+    const user2= await fetch("https://jsonplaceholder.typicode.com/users/2")
+    const user3 = await fetch("https://jsonplaceholder.typicode.com/users/3")
+
+    const responses = await Promise.all([user1,user2,user3])
+    
+      const [u1Data,u2Data,u3Data] = await Promise.all(responses.map(res=>res.json()));
+      console.log(`Name: ${u1Data.name} | Email: ${u1Data.email}`);
+      console.log(`Name: ${u2Data.name} | Email: ${u2Data.email}`);
+      console.log(`Name: ${u3Data.name} | Email: ${u3Data.email}`);
+      
+
+    
+
+  } catch (error) {
+    console.log(error.message);
+    
+  }
+}users()
 
 // //challenge 6
 // async function solution() {
@@ -138,8 +159,8 @@ const students = [
 // //challenge 11
 
 
-    const sorted = [...students].sort((a, b) => b.marks - a.marks);
-console.log(sorted);
+//     const sorted = [...students].sort((a, b) => b.marks - a.marks);
+// console.log(sorted);
 
 
 
